@@ -16,4 +16,4 @@ Le dossier `e2e/` est à la racine du repo, donc **hors de `src/`, donc hors de 
 
 ## Où l'alias est câblé
 
-`paths` dans le `tsconfig`, et `vite-tsconfig-paths` pour que Vite et Vitest le résolvent. Quand un import en `@/` ne résout pas, vérifier ces 2 réglages avant de retomber sur un chemin relatif.
+`paths` dans le `tsconfig`, et `resolve.tsconfigPaths: true` dans `vite.config.ts` pour que Vite et Vitest le résolvent (option native de Vite, pas besoin du plugin `vite-tsconfig-paths`). Quand un import en `@/` ne résout pas, vérifier ces 2 réglages avant de retomber sur un chemin relatif.
